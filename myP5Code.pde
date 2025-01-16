@@ -5,12 +5,18 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var fireworkX = 20;
+var fireworkSize=50;
+var firework=100;
+
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
- 
-  background(255,255,255,0);
   
+  background(255,255,255,0);
+ ellipse(100,firework,50,50);
+  ellipse(firework,200,fireworkSize,50); 
+  if(firework>50){firework=firework-1}
+  fireworkSize-=1
    if(mousePressed){
     showXYPositions();
     
